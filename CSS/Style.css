@@ -288,26 +288,23 @@ section {
     z-index: 2;
 }
 
-.btn:hover span {
-    color: #000;
+.btn::before {
+    background-color: #000000;
+    color: #ffffff;
 }
 
-.btn .hover {
-    position: absolute;
+.btn:hover {
+    position: relative;
+    background-color: white;
+    color: black;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    color: #000;
-    z-index: -1;
-    transform: translateY(100%);
+    transform: translateZ(100%);
     transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.btn:hover .hover {
-    transform: translateY(0);
-}
+
+
 
 
 
@@ -397,10 +394,6 @@ footer ul li a:hover {
         display: block;
     }
 
-    .section-inner-center h3 {
-        font-size: 75px;
-    }
-
     .stats {
         flex-direction: column;
     }
@@ -408,8 +401,8 @@ footer ul li a:hover {
     .stats div {
         margin-bottom: 20px;
     }
-}
 
+} 
 @media(max-width: 600px) {
     .section-inner {
         bottom: 75px;
@@ -436,8 +429,8 @@ footer ul li a:hover {
         margin: auto;
     }
 
-    .section-inner-center h3 {
-        font-size: 50px;
+    .stats {
+        font-size: 30px;
     }
 
     /* Stats */
@@ -448,25 +441,59 @@ footer ul li a:hover {
     .stats div {
         margin-bottom: 20px;
     }
+
+    .section-inner-center{
+        width: 100vw;
+    }
+
+    .section-inner-center h3 {
+        font-size: 40px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .section-inner-center p {
+        font-size: 10px !important;
+    }
+
+    .counter{
+        font-size: 40px !important;
+    }
+    .stats h4{
+        font-size: 10px !important;
+    }
+    
+    .section-inner-center-rideShare h3{
+        font-size: 35px !important;
+        margin-bottom: 20px !important;
+    }
+    .section-inner-center-rideShare p{
+        font-size: 15px !important;
+        width: 90vw;
+    }
 }
 
 /* Inner page */
 .bg-falcon-9 {
     background-image: url(../img/falcon-9.webp);
 }
+
 .bg-falcon-Heavy {
     background-image: url(../img/falcon-heavy.webp);
 }
+
 .bg-Dragon {
     background-image: url(../img/dragon.webp);
 }
-.bg-starShip{
+
+.bg-starShip {
     background-image: url(../img/starship.jpg);
 }
-.bg-HumanSpaceFlight{
+
+.bg-HumanSpaceFlight {
     background-image: url(../img/humanspaceflight.jpg);
 }
-.bg-RideShare{
+
+.bg-RideShare {
     background-image: url(../img/rideshare.jpg);
 }
 
@@ -499,9 +526,28 @@ footer ul li a:hover {
     animation-fill-mode: both;
 }
 
+
+/* Only change the font size and other some properties for the Ride-Share file */
+
+.section-inner-center-rideShare {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section-inner-center-rideShare h3{
+    font-size: 60px;
+    margin: 5px;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
 .stats {
     max-width: 960px;
     margin: 0 auto;
+    padding-bottom: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -527,3 +573,146 @@ footer ul li a:hover {
         opacity: 1;
     }
 }
+
+
+/* ---------------------------------------------------------------------------------- */
+
+/* Missions */
+
+.main-first{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/rideshare.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main-first img {
+    display: none;
+}
+.first-text{
+    font-size: 10px;
+    font: 16px / 26px D-DIN-Regular, Arial, Verdana, sans-serif;
+    padding: 90px;
+    font-weight: 400;
+}
+
+.main-second{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/starship.jpg');
+    background-size: cover;
+    background-position: start center;
+}
+.main-second img {
+    display: none;
+}
+
+.main-second h2 {
+    position: relative;
+    width: 60%;
+    font-size: 35px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    animation: fadeInUp 0.8s ease-in-out;
+
+}
+
+.main-second p {
+    position: relative;
+    width: 60%;
+    animation: fadeInUp 0.8s ease-in-out;
+    padding-bottom: 20px;
+    font: D-DIN-Regular, Arial, Verdana, sans-serif;
+}
+
+.btn-for-second{
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    min-width: 130px;
+    padding: 15px 50px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 2;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.btn-for-second:hover{
+    background-color: white;
+    color: black;
+} 
+
+
+
+
+
+
+.main-third{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/mission-slider-01.jpg');
+    background-size: cover;
+    background-position: start center;
+}
+
+.main-third img {
+    display: none;
+}
+
+.Lists  {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    cursor: pointer;
+}
+
+
+.Description h2{
+        animation: fadeInUp 0.8s ease-in-out;
+        font: D-DIN-Regular, Arial, Verdana, sans-serif;
+        font-size: 45px;
+        font-weight: 600;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-top: 25%;
+    }
+.Description p{
+        font: D-DIN-Regular, Arial, Verdana, sans-serif;
+        animation: fadeInUp 0.8s ease-in-out;
+        line-height: 1.6;
+        padding-left: 40px;
+        padding-right: 40px;
+}
+
+
+
+@media (max-width:600px) {
+    .text-second{
+        margin: 15%;
+        width: 100%;
+    }
+
+    .first-text{
+        text-align: center;
+    }
+}
+
+
+
+
