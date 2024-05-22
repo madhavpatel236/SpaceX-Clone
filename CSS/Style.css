@@ -621,6 +621,8 @@ footer ul li a:hover {
     font-weight: 600;
     padding-bottom: 20px;
     animation: fadeInUp 0.8s ease-in-out;
+    padding-left: 20px;
+
 
 }
 
@@ -628,6 +630,7 @@ footer ul li a:hover {
     position: relative;
     width: 60%;
     animation: fadeInUp 0.8s ease-in-out;
+    padding-left: 20px;
     padding-bottom: 20px;
     font: D-DIN-Regular, Arial, Verdana, sans-serif;
 }
@@ -647,11 +650,15 @@ footer ul li a:hover {
     overflow: hidden;
     z-index: 2;
     animation: fadeInUp 0.8s ease-in-out;
+    margin-left: 20px;
+
 }
 
 .btn-for-second:hover{
     background-color: white;
     color: black;
+    padding-left: 20px;
+
 } 
 
 
@@ -690,12 +697,14 @@ footer ul li a:hover {
         font-weight: 600;
         padding-left: 40px;
         padding-right: 40px;
+        padding-bottom: 30px;
         margin-top: 25%;
     }
 .Description p{
         font: D-DIN-Regular, Arial, Verdana, sans-serif;
         animation: fadeInUp 0.8s ease-in-out;
         line-height: 1.6;
+        width: 70%;
         padding-left: 40px;
         padding-right: 40px;
 }
